@@ -10,9 +10,9 @@ router.get('/totalblacklist',async(req, res) => {
         .status(200)
         .json({totalElements: resp.length})
 })
-router.get('/institution', async(req, res) => {
+router.get('/bus', async(req, res) => {
 
-    const resp = await blacklist.find({institution:institution});
+    const resp = await blacklist.find({type:"bussiness"});
 
     res
         .status(200)
@@ -21,7 +21,7 @@ router.get('/institution', async(req, res) => {
 
 router.get('/individuals',async(req, res) => {
 
-    const resp = await blacklist.find({institution:individual});
+    const resp = await blacklist.find({type:"individual"});
 
     res
         .status(200)

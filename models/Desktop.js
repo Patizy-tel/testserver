@@ -13,9 +13,14 @@ institution:{
     type:String,
     required:true
 },
-accouuntManager:{
+manager:{
     type:String,
     required:true
+},
+
+email:{
+
+    type:String
 },
 date:{
     type:Date,

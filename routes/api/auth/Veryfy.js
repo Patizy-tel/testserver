@@ -3,8 +3,10 @@ var config = require('../../../config/index'); // get our config file
 
 
 var verifyToken = async (req,res ,next) =>{
+
+  
   //check header parameters 
-  let token = req.headers['x-access-token'] ;
+  let token = req.headers['Authorization'] ;
   if(!token){
     return res.status(403).send({auth:false,message:'no token provied'})
   }else{
