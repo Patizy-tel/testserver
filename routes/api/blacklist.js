@@ -80,7 +80,10 @@ router.put('/update/:id', async(req, res) => {
     res
         .status(200)
         .json({result, message: "message have been updated"})
-})
+});
+
+
+//nodejs
 
 router.delete('/:id', async (req, res) => {
 
@@ -89,6 +92,15 @@ router.delete('/:id', async (req, res) => {
     res
         .status(200)
         .json({"message": ' doc deleted', deleted})
+});;
+
+
+router.patch('/ddd' ,(req,res) =>{
+
+
+
+
+    console.log('test')
 })
 
 module.exports = router
