@@ -41,7 +41,9 @@ function paginate(model) {
   router.get('/:id' ,todoController.getOne);
   router.patch('/one/:id' ,todoController.UpdateOne);
   router.delete('/del/:id' ,todoController.destroy)
-router.delete('/all' , todoController.destroyAll)
+router.delete('/all' , todoController.destroyAll) 
+
+router.patch('/status/:id/:bool' , todoController.changeStatus)
 
 
   module.exports = router

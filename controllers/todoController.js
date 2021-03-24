@@ -109,3 +109,27 @@ exports.destroyAll = async function (req, res) {
             .json({message: error.message});
     }
 };
+
+
+exports.changeStatus = async (req,res) =>{
+
+    let id = req.params.id ;
+    let bool = req.params.bool ;
+    
+    try {
+    
+    
+        const school = await Todod.findByIdAndUpdate(id, {
+            $set:{aproved:bool}
+        }, {new: true});
+    
+        res.send({message:'Updated',school})
+        
+    } catch (error) {
+    
+    
+        res.send({message:'there was an error'})
+        
+    }
+    
+    }
