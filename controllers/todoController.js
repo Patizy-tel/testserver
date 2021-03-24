@@ -119,8 +119,8 @@ exports.changeStatus = async (req,res) =>{
     try {
     
     
-        const school = await Todod.findByIdAndUpdate(id, {
-            $set:{aproved:bool}
+        const school = await Todo.findByIdAndUpdate(id, {
+            $set:{status:bool}
         }, {new: true});
     
         res.send({message:'Updated',school})
