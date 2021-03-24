@@ -1,27 +1,25 @@
-const mongoose = require('mongoose')
+const mongoose = require('../db/db')
 
 const BlackListSchema = new mongoose.Schema({
 name:{
     type:String,
     required:true
 } ,
-type:{
+description:{
+
     type:String,
     required:true
-} ,
-institution:{
-    type:String,
-    required:true
+
+
 },
-manager:{
-    type:String,
-    required:true
+status:{
+
+    type:Boolean,
+    default:false
+
+
 },
 
-email:{
-
-    type:String
-},
 date:{
     type:Date,
     required:true
@@ -29,7 +27,7 @@ date:{
 },
 
 
-});
+},{timestamps:true});
 
 
 module.exports = mongoose.model('blacklist', BlackListSchema);
