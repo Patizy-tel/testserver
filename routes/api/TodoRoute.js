@@ -39,8 +39,8 @@ function paginate(model) {
   router.post('/',todoController.create);
   router.get('/' ,paginate(todoModel),todoController.getAll);
   router.get('/:id' ,todoController.getOne);
-  router.patch('one/:id' ,todoController.UpdateOne);
-  router.delete('/one/:id' ,todoController.destroy)
+  router.patch('/one/:id' ,todoController.UpdateOne);
+  router.delete('/del/:id' ,todoController.destroy)
 router.delete('/all' , todoController.destroyAll)
 
 
